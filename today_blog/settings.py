@@ -51,10 +51,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'today_blog.urls'
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, "template")
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,6 +80,7 @@ WSGI_APPLICATION = 'today_blog.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
