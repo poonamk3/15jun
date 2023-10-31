@@ -85,11 +85,17 @@ WSGI_APPLICATION = 'today_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'today',
-        'USER': 'postgres',
-        'PASSWORD': 'psql',
-        'HOST': 'db',  # This will be the hostname of the PostgreSQL container
-        'PORT': 5432,  # Default PostgreSQL port
+        #'NAME': 'today',
+        #'USER': 'postgres',
+        #'PASSWORD': 'psql',
+        #'HOST': 'db',  # This will be the hostname of the PostgreSQL container
+#	'HOST': 'postgres-container',
+ #       'PORT': 5432,  # Default PostgreSQL port
+	'NAME': 'mydatabase',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'postgres-container',  # This is the name of the PostgreSQL container in the network.
+        'PORT': '5432',
     }
 }
 
